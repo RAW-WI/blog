@@ -23,14 +23,14 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
-# 强制 GitHub Actions 使用 Node.js 24
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   # 构建工作
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout
         uses: actions/checkout@v5
