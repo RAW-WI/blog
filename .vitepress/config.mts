@@ -2,10 +2,13 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+    head: [['link', { rel: 'icon', href: '/logo.png' }]],
   lang: 'en-ZH',
   title: "YINGWI_BLOG",
   description: "好记性不如烂笔头，记一下好用但不常用的工具，顺便分享出来。",
   themeConfig: {
+    siteTitle: 'YINGWIs BLOG - 好记性不如烂笔头',
+    logo: '/logo.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       // { text: 'Home', link: '/' },
